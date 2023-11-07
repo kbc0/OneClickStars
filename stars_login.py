@@ -50,8 +50,6 @@ def check_inbox(username, password, imap_server):
 
                 mail_from = message["from"]
                 mail_subject = message["subject"]
-                print(mail_from)
-                print(f"Email Subject: {mail_subject}")  # Debug print
 
                 if "Secure Login Gateway E-Mail Verification Code" in mail_subject:
                     if message.is_multipart():
@@ -62,8 +60,6 @@ def check_inbox(username, password, imap_server):
                                 mail_content += part.get_payload()
                     else:
                         mail_content = message.get_payload()
-
-                    print(f"Email Content: {mail_content}")  # Debug print
 
                     code = extract_verification_code(mail_content)
                     mail.logout()
@@ -97,7 +93,6 @@ def instant_stars():
     # Log in
     password_field.send_keys(Keys.RETURN)
 
-    print("Waiting for verification code...")
     time.sleep(10)
 
     # Wait and check for the verification code in the email
@@ -105,7 +100,6 @@ def instant_stars():
         #Fill the below field with your credentials
         "your.mail@ug.bilkent.edu.tr", "yourMailPassword", "mail.bilkent.edu.tr"
     )
-    print(verification_code)
     # Enter the verification code in the webpage
     if verification_code:
         WebDriverWait(driverSTARS, 10).until(
