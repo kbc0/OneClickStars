@@ -57,7 +57,7 @@ Contributions are welcome! If you are a Bilkent student familiar with the SRS sy
 
 This script is for educational purposes and should be used ethically and responsibly. The author bears no responsibility for any misuse or damage. 
 
-Also I don't think I will maintain this repository, therefore if BCC changes the SRS Login System in the future, you may need to adjust the code accordingly. This code is written in 2023 and works fine with this system.
+Also I don't think I will maintain this repository, therefore if BCC changes the SRS Login System in the future, you may need to adjust the code accordingly. This code is written in 2023 and currently works fine.
 
 ## License
 
